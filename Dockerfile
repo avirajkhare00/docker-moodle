@@ -10,6 +10,11 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 RUN apt-get -y upgrade
+
+# Adding repository for php7.0
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository ppa:ondrej/php
+RUN apt-get update
  
 # Basic Requirements
 RUN apt-get -y install pwgen python-setuptools curl git unzip apache2 mysql-client mysql-server php7.0 libapache2-mod-php7.0
