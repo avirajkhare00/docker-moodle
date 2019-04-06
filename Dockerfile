@@ -12,10 +12,10 @@ RUN apt-get update
 RUN apt-get -y upgrade
  
 # Basic Requirements
-RUN apt-get -y install mysql-server mysql-client pwgen python-setuptools curl git unzip
+RUN apt-get -y install pwgen python-setuptools curl git unzip apache2 mysql-client mysql-server php7.0 libapache2-mod-php7.0
 
 # Moodle Requirements
-RUN apt-get -y install apache2 php5 php5-gd libapache2-mod-php5 postfix wget supervisor php5-pgsql vim curl libcurl3 libcurl3-dev php5-curl php5-xmlrpc php5-intl php5-mysql
+RUN apt-get -y install apt-get install graphviz aspell ghostscript clamav php7.0-pspell php7.0-curl php7.0-gd php7.0-intl php7.0-mysql php7.0-xml php7.0-xmlrpc php7.0-ldap php7.0-zip php7.0-soap php7.0-mbstring
 
 # SSH
 RUN apt-get -y install openssh-server
