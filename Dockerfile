@@ -16,7 +16,7 @@ RUN apt-get -y upgrade
 
 # Adding repository for php7.0
 RUN apt-get -y install software-properties-common
-RUN add-apt-repository ppa:ondrej/php
+RUN LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 RUN apt-get update
  
 # Basic Requirements
